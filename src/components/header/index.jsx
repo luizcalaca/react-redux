@@ -12,14 +12,15 @@ function Header() {
   const {currentUser} = useSelector((rootReducer)=> rootReducer.userReducer)
   const dispatch = useDispatch()
   console.log(currentUser)
-  
+
   const handleCartClick = () => {
     setCartIsVisible(true);
   };
 
   const handleLoginClick = () => {
     dispatch({
-      type: "user/login"
+      type: "user/login",
+      payload: {name: 'calaca', email: '@teste.com'}
     })
   }
 
@@ -27,7 +28,11 @@ function Header() {
     <Styles.Container>
       <Styles.Logo>Redux Shopping</Styles.Logo>
       <Styles.Buttons>
-        <div onClick={handleLoginClick}>Login</div>
+        {currentUser ? (
+          <div>Sair</div>
+        ): (
+          <div onClick={handleLoginClick}>Login</div>
+        )}
         <div onClick={handleCartClick}>Carrinho</div>
       </Styles.Buttons>
 
