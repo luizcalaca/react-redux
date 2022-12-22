@@ -1,7 +1,7 @@
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai";
 
 // Styles
-import * as Styles from "./cart-item.styles";
+import * as Styles from "./styles";
 
 const CartItem = ({ product }) => {
   const handleRemoveClick = () => {};
