@@ -14,3 +14,8 @@ export const increaseProductQuantity = (payload) => ({
     type: CarActionTypes.INCREASE_PRODUCT_QUANTITY,
     payload
 });
+
+export const decreaseProductQuantity = (payload) => ({
+    type: CarActionTypes.DECREASE_PRODUCT_QUANTITY,
+    payload
+});
