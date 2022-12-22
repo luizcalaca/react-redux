@@ -9,3 +9,8 @@ export const removeProductFromCart = (payload) => ({
     type: CarActionTypes.REMOVE_PRODUCT,
     payload
 });
+
+export const increaseProductQuantity = (payload) => ({
+    type: CarActionTypes.INCREASE_PRODUCT_QUANTITY,
+    payload
+});
