@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { loginUser, logoutUser } from "../../redux/user/actions";
 
 // Components
 import Cart from "../cart/index";
@@ -18,16 +19,11 @@ function Header() {
   };
 
   const handleLoginClick = () => {
-    dispatch({
-      type: "user/login",
-      payload: {name: 'calaca', email: '@teste.com'}
-    })
+    dispatch(loginUser({name: 'calaca', email: '@teste.com'}))
   }
 
   const handleLoginOutClick = () => {
-    dispatch({
-      type: "user/logout"
-    })
+    dispatch(logoutUser())
   }
 
   return (
